@@ -28,7 +28,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 code {
@@ -73,13 +73,14 @@ code {
   color: white;
   display: flex;
   justify-content: center;
+  height: 60vh;
 
 
   .header-image {
     background-image: url("./images/header-image-1.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 60vh;
+    height: 60vh;
     width: 100%;
     position: absolute;
     opacity: 0.7;
@@ -88,6 +89,65 @@ code {
 
   .text {
     text-align: center;
-    margin-top:30px;
+    margin-top: 30px;
+  }
+}
+
+//About us
+.about-container {
+  justify-content: center;
+  padding-top: 40px;
+
+  h2 {
+    font-size: 80px;
+    color: $custom-green;
+  }
+
+  .title {
+    text-align: center;
+    color: $custom-gold;
+    bottom:0;
+
+    h1 {
+      font-size: 100px;
+
+    }
+  }
+
+  .col {
+    padding: 0;
+  }
+
+  .photo-row {
+    margin: 0 60px 0 60px;
+    background-color: #f4fdfa;
+
+    .about-text-1 {
+      margin-top: 40px;
+      padding: 0 30px 0 60px;
+      text-align: right;
+
+      p {
+        margin-top: 40px;
+      }
+    }
+
+    .about-text-2 {
+      margin-top: 40px;
+      padding: 0 60px 0 30px;
+      text-align: left;
+
+      p {
+        margin-top: 40px;
+      }
+    }
+
+    .photo {
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }
