@@ -1,5 +1,6 @@
 import React from "react";
 import CasinoIcon from "@mui/icons-material/Casino";
+import Title from "./Title";
 
 function About() {
     return (
@@ -7,20 +8,7 @@ function About() {
             <div>
                 <div className="row">
                     <div className="col title">
-                        <h1 className="passion"><CasinoIcon
-                            sx={{
-                                width: "40px",
-                                height: "40px",
-                                marginRight: "30px",
-                                verticalAlign: "initial"
-                            }}
-                        />O nás<CasinoIcon
-                            sx={{
-                                width: "40px",
-                                height: "40px",
-                                marginLeft: "30px",
-                                verticalAlign: "initial"
-                            }}/></h1>
+                        <Title name={"O nás"} />
                     </div>
                 </div>
                 <div className="row row-cols-2 photo-row">
@@ -35,12 +23,12 @@ function About() {
                         </div>
                     </div>
                     <div className="col photo">
-                        <img src="/images/portrait-1.webp" alt="Photo of a women"/>
+                        <img src="/images/portrait-1.webp" alt="Young women"/>
                     </div>
                 </div>
                 <div className="row photo-row">
                     <div className="col photo">
-                        <img src="/images/portrait-2.jpeg" alt="Photo of a women"/>
+                        <img src="/images/portrait-2.jpeg" alt="Young women"/>
                     </div>
                     <div className="col">
                         <div className="about-text-2">

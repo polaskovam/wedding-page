@@ -7,7 +7,7 @@ function Header() {
             <div className="row text">
                 <h5>Budeme se brát!</h5>
                 <h1>Annie & Marťa</h1>
-                <h5>15. dubna 2025</h5>
+                <h4>15. dubna 2025</h4>
             </div>
         </div>
     )

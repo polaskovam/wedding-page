@@ -1,4 +1,11 @@
 import React from "react";
-function Timeline() {}
+import Title from "./Title";
+function Timeline() {
+    return(
+        <div>
+
+        </div>
+    )
+}
 
 export default Timeline;
