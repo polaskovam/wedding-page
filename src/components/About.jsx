@@ -1,5 +1,4 @@
 import React from "react";
-import CasinoIcon from "@mui/icons-material/Casino";
 import Title from "./Title";
 
 function About() {

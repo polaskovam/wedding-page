@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import About from "./components/About";
-import CasinoIcon from '@mui/icons-material/Casino';
+import Timeline from "./components/Timeline";
 
 function App() {
     return (
@@ -10,6 +10,7 @@ function App() {
             <NavBar/>
             <Header/>
             <About/>
+            <Timeline/>
         </div>
     );
 }
