@@ -5,6 +5,8 @@ import About from "./components/About";
 import Timeline from "./components/Timeline";
 import Ceremony from "./components/Ceremony";
 import Gallery from "./components/Gallery";
+import Rsvp from "./components/Rsvp";
+import Footer from "./components/Footer"
 
 function App() {
     return (
@@ -13,8 +15,10 @@ function App() {
             <Header/>
             <About/>
             <Timeline/>
-            <Ceremony />
-            <Gallery />
+            <Ceremony/>
+            <Gallery/>
+            <Rsvp/>
+            <Footer/>
         </div>
     );
 }

@@ -287,3 +287,74 @@ code {
     }
   }
 }
+
+// RSVP
+
+.rsvp {
+  padding: 40px 100px 40px 100px;
+  color: $custom-green;
+
+  .title {
+
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+  .sub-title {
+    text-align: center;
+  }
+
+  .rsvp-form {
+    padding: 20px 50px 20px 80px;
+    background-color: #d8fcf1;
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    margin: 0 80px 0 80px;
+
+    .row {
+      margin-left: 10%;
+    }
+
+    .input-form {
+      width: 300px;
+      padding-bottom: 20px;
+    }
+
+    .food {
+      margin-top: 50px;
+    }
+
+    textarea {
+      height: 100px;
+      margin-top: 10px;
+    }
+
+  }
+}
+
+// Button
+.button {
+  background-color: $custom-gold;
+}
+.button:hover {
+  background-color: $custom-gold;
+}
+
+
+.btn-center {
+  text-align: center;
+  margin-right: 120px;
+}
+
+//Footer
+.footer {
+  background-color: $custom-green;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: white;
+
+  h1 {
+    font-size: 60px;
+  }
+}
