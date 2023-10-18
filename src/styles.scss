@@ -155,6 +155,7 @@ code {
   text-align: center;
   color: $custom-gold;
   bottom: 0;
+  margin-bottom: 50px;
 }
 
 //Timeline
@@ -165,7 +166,6 @@ code {
 
   h1 {
     font-size: 100px;
-
   }
 
   .center {
@@ -174,7 +174,6 @@ code {
   }
 
   .content {
-
     border-radius: 8px;
     background-color: #f4fdfa;
 
@@ -184,6 +183,7 @@ code {
 
     .space {
       margin: 0 30px 0 30px;
+      color: $custom-green;
     }
   }
 }
@@ -218,12 +218,11 @@ code {
   position: absolute;
   width: 6px;
   background-color: $custom-gold;
-  top: 160px;
+  top: 185px;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
 }
-
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
@@ -232,4 +231,59 @@ code {
     left: 31px;
   }
 
+}
+
+// Ceremony
+
+.ceremony {
+  padding-top: 40px;
+  color: $custom-green;
+
+  .title {
+
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+  .ceremony-row {
+    padding-bottom: 20px;
+  }
+
+  .ceremony-text {
+    padding-left: 50px;
+    margin-top: 10px;
+
+    h5 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .ceremony-text-2 {
+    padding-left: 50px;
+    margin-top: 30px;
+  }
+
+  .small-title {
+    font-size: 80px;
+    text-align: center;
+  }
+
+
+  .iframe {
+    text-align: center;
+  }
+}
+
+// Gallery
+.gallery {
+  padding-top: 40px;
+  color: $custom-green;
+
+  .title {
+
+    h1 {
+      font-size: 100px;
+    }
+  }
 }
