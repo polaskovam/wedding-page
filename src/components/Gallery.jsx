@@ -1,11 +1,11 @@
 import React from "react";
 import Title from "./Title";
 
-function Gallery() {
+function Gallery(props) {
     return(
-        <div className="container gallery">
+        <div className="container gallery" id="gallery">
             <div className="title">
-                <Title name={"Galerie"}/>
+                <Title name={"Galerie"} windowWidth={props.windowWidth}/>
             </div>
             <div id="carouselExample" className="carousel slide">
                 <div className="carousel-inner">

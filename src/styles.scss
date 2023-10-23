@@ -17,6 +17,11 @@
   font-family: Montserrat, sans-serif;
 }
 
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 $custom-green: #173F35;
 $custom-gold: #b89900;
 
@@ -37,18 +42,23 @@ code {
 }
 
 // Navbar
-.navbar {
-  background-color: $custom-green;
+.navbar, .bg-dark {
+  background-color: $custom-green !important;
   z-index: 99;
 
+  .navbar-toggler {
+    margin-bottom: 10px;
+  }
+
   .r-margin {
-    margin-right: 18px;
+    margin: 9px;
   }
 
   .main-brand, .main-brand:visited {
     margin: 0 80px 0 80px;
     font-size: 60px;
     color: white;
+    align-self: center;
 
     .main-span {
       color: $custom-gold;
@@ -107,11 +117,6 @@ code {
     font-size: 80px;
     color: $custom-green;
   }
-
-  h1 {
-    font-size: 100px;
-
-  }
 }
 
 .col {
@@ -119,7 +124,6 @@ code {
 }
 
 .photo-row {
-  margin: 0 60px 0 60px;
   background-color: #f4fdfa;
 
   .about-text-1 {
@@ -155,22 +159,20 @@ code {
   text-align: center;
   color: $custom-gold;
   bottom: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  h1 {
+    font-size: 100px;
+  }
 }
 
 //Timeline
 .timeline {
   padding-top: 40px;
   position: relative;
-  margin: 0 auto;
 
-  h1 {
-    font-size: 100px;
-  }
-
-  .center {
-    margin-left: 55px;
-    margin-right: 55px;
+  .title {
+    margin-bottom: 50px;
   }
 
   .content {
@@ -190,29 +192,43 @@ code {
 
 .event-row {
   padding-bottom: 20px;
-}
 
-.left {
-  text-align: right;
-  margin-right: 60px;
-}
+  .left {
+    text-align: right;
+    padding-right: 60px;
+  }
 
-.right {
-  text-align: left;
-  margin-left: 60px;
-}
+  .right {
+    text-align: left;
+    padding-left: 60px;
+  }
 
-.cake {
-  text-align: center;
+  @media screen and (max-width: 991px) {
+    .content {
+      text-align: center;
+    }
 
-  img {
-    height: 200px;
-    width: 200px;
-    margin: 0 50px 0 50px;
+    .left {
+      padding-right: 0;
+    }
+
+    .right {
+      padding-left: 20px;
+    }
+  }
+
+  .cake {
+    text-align: center;
+
+    img {
+      height: 200px;
+      width: 200px;
+      margin: 0 50px 0 50px;
+    }
   }
 }
 
-//Vertical ruler
+// Vertical ruler
 .ruler::after {
   content: '';
   position: absolute;
@@ -224,13 +240,11 @@ code {
   margin-left: -3px;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Places the ruler to the left */
+// Places the ruler to the left //
+@media screen and (max-width: 991px) {
   .ruler::after {
-    left: 31px;
+    left: 0;
   }
-
 }
 
 // Ceremony
@@ -239,14 +253,8 @@ code {
   padding-top: 40px;
   color: $custom-green;
 
-  .title {
-
-    h1 {
-      font-size: 100px;
-    }
-  }
-
   .ceremony-row {
+    margin: 0;
     padding-bottom: 20px;
   }
 
@@ -269,9 +277,13 @@ code {
     text-align: center;
   }
 
-
   .iframe {
     text-align: center;
+    margin-top: 25px;
+
+    iframe {
+      max-width: 100%;
+    }
   }
 }
 
@@ -280,24 +292,24 @@ code {
   padding-top: 40px;
   color: $custom-green;
 
-  .title {
-
-    h1 {
-      font-size: 100px;
-    }
-  }
+  //.title {
+  //  margin-bottom: 20px;
+  //}
 }
 
 // RSVP
 
 .rsvp {
-  padding: 40px 100px 40px 100px;
-  color: $custom-green;
+  padding-top: 40px;
 
-  .title {
+  .form-container {
+    padding: 0 100px 40px 100px;
+    color: $custom-green;
+  }
 
-    h1 {
-      font-size: 100px;
+  @media screen and (max-width: 991px) {
+    .form-container {
+      padding: 0 ;
     }
   }
 
@@ -306,18 +318,22 @@ code {
   }
 
   .rsvp-form {
-    padding: 20px 50px 20px 80px;
+    padding: 30px 50px;
     background-color: #d8fcf1;
     background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-    margin: 0 80px 0 80px;
-
-    .row {
-      margin-left: 10%;
-    }
+    margin: 0 80px;
 
     .input-form {
-      width: 300px;
+      width: calc(50% - 1.5rem);
       padding-bottom: 20px;
+    }
+
+    .radio {
+      width: calc(50% - 1.5rem);
+      .form-check-input {
+        float: none;
+        margin-right: 0.5rem;
+      }
     }
 
     .food {
@@ -329,6 +345,17 @@ code {
       margin-top: 10px;
     }
 
+    @media screen and (min-width: 1200px) {
+      padding: 45px 75px;
+    }
+
+    @media screen and (max-width: 991px) {
+      margin: 0 0 80px 0;
+
+      .input-form, .radio {
+        width: calc(100%);
+      }
+    }
   }
 }
 
@@ -343,7 +370,6 @@ code {
 
 .btn-center {
   text-align: center;
-  margin-right: 120px;
 }
 
 //Footer

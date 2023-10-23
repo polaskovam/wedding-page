@@ -3,13 +3,15 @@ import Title from "./Title";
 import LeftEvent from "./LeftEvent";
 import RightEvent from "./RightEvent";
 
-function Timeline() {
+function Timeline(props) {
     return (
-        <div className="container timeline">
-            <div className="center">
-                <div className="title">
-                    <Title name={"Harmonogram"}/>
+        <div className="container timeline" id="timeline">
+            <div className="row">
+                <div className="col title">
+                    <Title name={"Harmonogram"} windowWidth={props.windowWidth} />
                 </div>
+            </div>
+            <div className="row">
                 <div className="container ruler">
                     <LeftEvent time={"11:30 - 12:30"}
                                 description={"Wedding guest photos"}

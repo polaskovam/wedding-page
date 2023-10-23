@@ -1,17 +1,17 @@
 import React from "react";
 import Title from "./Title";
 
-function Ceremony() {
+function Ceremony(props) {
     return (
-        <div className="container ceremony">
+        <div className="container ceremony" id="ceremony">
             <div className="title">
-                <Title name={"Obřad"}/>
+                <Title name={"Obřad"} windowWidth={props.windowWidth} />
             </div>
             <div className="row ceremony-row">
-                <div className="col">
+                <div className="col col-12 col-md-6">
                     <h3 className="passion small-title">Dresscode</h3>
                 </div>
-                <div className="col montserrat">
+                <div className="col col-12 col-md-6 montserrat">
                     <div className="ceremony-text">
                         <h5>Prosíme stylizujte své oblečení do barev: bílá, černá, pastelová</h5>
                         <h5>Obřad bude probíhat částečně na zahradě, zvolte tedy vhodnou obuv</h5>
@@ -19,10 +19,10 @@ function Ceremony() {
                 </div>
             </div>
             <div className="row ceremony-row">
-                <div className="col">
+                <div className="col col-12 col-md-6">
                     <h3 className="passion small-title">Místo konání</h3>
                 </div>
-                <div className="col montserrat">
+                <div className="col col-12 col-md-6 montserrat">
                     <div className="ceremony-text-2">
                         <h5>La Donuteria</h5>
                         <h6>17. listopadu 342, Pardubice</h6>

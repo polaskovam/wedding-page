@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -9,15 +9,29 @@ import Rsvp from "./components/Rsvp";
 import Footer from "./components/Footer"
 
 function App() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    function handleResize() {
+        setWindowWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <div>
-            <NavBar/>
+            <NavBar windowWidth={windowWidth} />
             <Header/>
-            <About/>
-            <Timeline/>
-            <Ceremony/>
-            <Gallery/>
-            <Rsvp/>
+            <About windowWidth={windowWidth} />
+            <Timeline windowWidth={windowWidth} />
+            <Ceremony windowWidth={windowWidth} />
+            <Gallery windowWidth={windowWidth} />
+            <Rsvp windowWidth={windowWidth} />
             <Footer/>
         </div>
     );
